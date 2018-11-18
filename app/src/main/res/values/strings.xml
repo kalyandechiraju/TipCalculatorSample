@@ -1,11 +1,17 @@
 <resources>
   <string name="app_name">Tip Calculator</string>
   <string name="activity_main_people_count_label_text">Number of people</string>
-  <string name="activity_main_total_bill_label_text">Total Bill</string>
+  <string name="activity_main_total_bill_label_text">Total Bill ($)</string>
   <string name="activity_main_tip_percent_label_text">Tip Percentage (%)</string>
   <string name="activity_main_calculate_button_text">Calculate</string>
   <string name="activity_main_people_count_hint">Eg: 4</string>
   <string name="activity_main_total_bill_hint">Eg: 200</string>
   <string name="activity_main_tip_percent_text">Eg: 20</string>
   <string name="activity_main_result_label_text">Total bill per person:</string>
+
+  <string name="default_people_count">4</string>
+  <string name="default_tip_percentage">20</string>
+  <string name="error_no_number_of_people">Enter number of people</string>
+  <string name="error_no_total_bill">Enter the bill amount</string>
+  <string name="error_no_tip_percentage">Enter tip percentage</string>
 </resources>

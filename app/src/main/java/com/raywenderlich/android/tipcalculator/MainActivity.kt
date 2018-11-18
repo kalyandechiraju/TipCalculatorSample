@@ -32,9 +32,9 @@ class MainActivity : AppCompatActivity() {
     val calculateButton = findViewById<Button>(R.id.activity_main_calculate_button)
     calculateButton.setOnClickListener {
       when {
-        numberOfPeople.text?.toString()?.isBlank() == true -> numberOfPeople.error = "Enter number of people"
-        totalBill.text?.toString()?.isBlank() == true -> totalBill.error = "Enter the bill amount"
-        tipPercentage.text?.toString()?.isBlank() == true -> tipPercentage.error = "Enter tip percentage"
+        numberOfPeople.text?.toString()?.isBlank() == true -> numberOfPeople.error = getString(R.string.error_no_number_of_people)
+        totalBill.text?.toString()?.isBlank() == true -> totalBill.error = getString(R.string.error_no_total_bill)
+        tipPercentage.text?.toString()?.isBlank() == true -> tipPercentage.error = getString(R.string.error_no_tip_percentage)
         else -> viewModel.computeTip(
             numberOfPeople = numberOfPeople.text.toString().toInt(),
             tipPercentage = tipPercentage.text.toString().toDouble(),
@@ -42,6 +42,12 @@ class MainActivity : AppCompatActivity() {
         )
       }
     }
+
+    // Set default values
+    numberOfPeople.setText(getString(R.string.default_people_count))
+    tipPercentage.setText(getString(R.string.default_tip_percentage))
+
+    totalBill.requestFocus()
   }
 
   override fun onResume() {

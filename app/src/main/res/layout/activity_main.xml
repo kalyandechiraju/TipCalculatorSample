@@ -7,18 +7,24 @@
   android:background="@color/white"
   tools:context=".MainActivity">
 
-  <android.support.v7.widget.Toolbar
-    android:id="@+id/activity_main_toolbar"
-    android:layout_width="0dp"
+  <android.support.design.widget.AppBarLayout
+    android:id="@+id/activity_main_appbar"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/colorPrimary"
-    android:minHeight="?attr/actionBarSize"
-    android:theme="?attr/actionBarTheme"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:title="@string/app_name"
-    app:titleTextColor="@color/white" />
+    app:layout_constraintTop_toTopOf="parent">
+
+    <android.support.v7.widget.Toolbar
+      android:id="@+id/activity_main_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?attr/colorPrimary"
+      android:minHeight="?attr/actionBarSize"
+      android:theme="?attr/actionBarTheme"
+      app:title="@string/app_name"
+      app:titleTextColor="@color/white" />
+  </android.support.design.widget.AppBarLayout>
 
   <ScrollView
     android:layout_width="0dp"
@@ -27,7 +33,7 @@
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/activity_main_toolbar">
+    app:layout_constraintTop_toBottomOf="@+id/activity_main_appbar">
 
     <android.support.constraint.ConstraintLayout
       android:layout_width="match_parent"
@@ -58,7 +64,6 @@
         android:hint="@string/activity_main_people_count_hint"
         android:importantForAutofill="no"
         android:inputType="number"
-        android:maxLength="3"
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/activity_main_people_count_label"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,8 +134,7 @@
         android:ems="10"
         android:hint="@string/activity_main_tip_percent_text"
         android:importantForAutofill="no"
-        android:inputType="number"
-        android:maxLength="2"
+        android:inputType="numberDecimal"
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/activity_main_tip_percent_label"
         app:layout_constraintEnd_toEndOf="parent"
