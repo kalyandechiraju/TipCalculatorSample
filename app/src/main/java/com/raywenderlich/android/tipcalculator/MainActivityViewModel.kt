@@ -14,10 +14,7 @@ class MainActivityViewModel : ViewModel() {
     get() = _result
 
   fun computeTip(numberOfPeople: Int, tipPercentage: Double, totalBill: Double) {
-    val tipAmount = (totalBill * tipPercentage) / 100
-    val totalAmountToPay = tipAmount + totalBill
-    val billPerPerson = totalAmountToPay / numberOfPeople
-    _result.postValue(String.format("$%.2f", billPerPerson))
+    // TODO implement the tip computation logic
   }
 
 }
